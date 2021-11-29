@@ -12,6 +12,4 @@
     <p> No server was created</p>
 </ng-template>
 
-<!-- <p>{{serverCreationStatus}}</p> -->
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor = "let serverObj of servers"></app-server>
