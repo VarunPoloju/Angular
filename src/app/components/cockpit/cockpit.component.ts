@@ -1,34 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
   templateUrl: './cockpit.component.html',
   styleUrls: ['./cockpit.component.css']
 })
-export class CockpitComponent implements OnInit {
+export class CockpitComponent {
   newServerName = '';
   newServerContent = '';
 
 
-  constructor() { }
+  @Output() serverCreated = new EventEmitter();
+  @Output() blueprintcreated = new EventEmitter();
 
-  ngOnInit(): void {
-  }
- 
 
   onAddServer() {
-    // this.serverElements.push({
-    //   type: 'server',
-    //   name: this.newServerName,
-    //   content: this.  newServerContent
-    // });
+    this.serverCreated.emit({ serverName: this.newServerName, serverContent: this.newServerContent })
   }
 
   onAddBlueprint() {
-    // this.serverElements.push({
-    //   type: 'blueprint',
-    //   name: this.newServerName,
-    //   content: this.newServerContent
-    // });
+    this.blueprintcreated.emit({ serverName: this.newServerName, serverContent: this.newServerContent })
   }
 }
