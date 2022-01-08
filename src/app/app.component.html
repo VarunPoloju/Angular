@@ -4,6 +4,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="btn btn-primary" (click)="onchangeFirst()">Change First element</div>
+      <div class="btn btn-danger" (click)="onDestroy()">Destroy</div>
       <app-server-element *ngFor="let serverElement of serverElements" [hello]="serverElement"
        [name]="serverElement.name">
         <!-- if u want to pass p or h tags directly from app-server-element component
