@@ -3,7 +3,9 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements" [hello]="serverElement">
+      <div class="btn btn-primary" (click)="onchangeFirst()">Change First element</div>
+      <app-server-element *ngFor="let serverElement of serverElements" [hello]="serverElement"
+       [name]="serverElement.name">
         <!-- if u want to pass p or h tags directly from app-server-element component
               use ng-content tag in that component and p tag in this component -->
         <p>
