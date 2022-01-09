@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [ {type :'server',name :'test server',content : 'Just a test'}];
+  value =10;
 
   onServerCreated(cockpitdata:{serverName :string,serverContent:string}){
      this.serverElements.push({
