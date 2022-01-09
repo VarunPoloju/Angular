@@ -13,6 +13,7 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
 import { ShoppingEditComponent } from './components/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './components/cockpit/cockpit.component';
 import { ServerElementComponent } from './components/server-element/server-element.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ServerElementComponent } from './components/server-element/server-eleme
     ShoppingEditComponent,
     CockpitComponent,
     ServerElementComponent,
+    HighlightDirective,
    
   ],
   imports: [
