@@ -15,6 +15,7 @@ import { CockpitComponent } from './components/cockpit/cockpit.component';
 import { ServerElementComponent } from './components/server-element/server-element.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
     ServerElementComponent,
     HighlightDirective,
     BetterHighlightDirective,
+    UnlessDirective,
    
   ],
   imports: [
