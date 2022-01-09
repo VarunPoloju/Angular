@@ -14,6 +14,7 @@ import { ShoppingEditComponent } from './components/shopping-edit/shopping-edit.
 import { CockpitComponent } from './components/cockpit/cockpit.component';
 import { ServerElementComponent } from './components/server-element/server-element.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     CockpitComponent,
     ServerElementComponent,
     HighlightDirective,
+    BetterHighlightDirective,
    
   ],
   imports: [
