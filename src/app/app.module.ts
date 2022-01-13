@@ -16,6 +16,8 @@ import { ServerElementComponent } from './components/server-element/server-eleme
 import { HighlightDirective } from './directives/highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { AccountComponent } from './components/account/account.component';
+import { NewAccountComponent } from './components/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { UnlessDirective } from './directives/unless.directive';
     HighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
+    AccountComponent,
+    NewAccountComponent,
    
   ],
   imports: [

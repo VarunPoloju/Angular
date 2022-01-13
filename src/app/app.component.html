@@ -1,28 +1,13 @@
 <div class="container">
-  <app-cockpit (Screated)="onServerCreated($event)" (Bpcreated)="onBlueprintCreated($event)"></app-cockpit>
-  <hr>
   <div class="row">
-    <div class="col-xs-12">
-      <div class="btn btn-primary" (click)="onchangeFirst()">Change First element</div>
-      <div class="btn btn-danger" (click)="onDestroy()">Destroy</div>
-      <app-server-element *ngFor="let serverElement of serverElements" [hello]="serverElement"
-       [name]="serverElement.name">
-        <!-- if u want to pass p or h tags directly from app-server-element component
-              use ng-content tag in that component and p tag in this component -->
-        <p>
-          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.name }}</strong>
-          <em *ngIf="serverElement.type === 'blueprint'" style="color: blue;">{{ serverElement.content }}</em>
-        </p>
-      </app-server-element>
-      <p appHighlight>Style me with basic directive</p>
-      <p appBetterHighlight [defaultColor]="'yellow'" [highLigtcolor]="'red'">Style me with directive using Renderer</p>
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <hr>
+      <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"
+        (statusChanged)="onStatusChanged($event)"></app-account>
     </div>
-  </div>
-  <div [ngSwitch]="value">
-    <p *ngSwitchCase="5">Value is 5</p>
-    <p *ngSwitchCase="10">Value is 10</p>
-    <p *ngSwitchCase="15">Value is 15</p>
-    <p *ngSwitchCase="20">Value is 20</p>
-    <!-- <p ngSwitchDefault>Value is default</p> -->
   </div>
 </div>
